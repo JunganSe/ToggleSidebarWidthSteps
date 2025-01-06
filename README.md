@@ -1,71 +1,27 @@
-# toggle-sidebar-width README
+### WIP
+This extension is in development, and is not yet released.\
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 
-This is the README for your extension "toggle-sidebar-width". After writing up a brief description, we recommend including the following sections.
 
-## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+# Toggle sidebar width
 
-For example if there is an image subfolder under your extension project workspace:
+Toggle the primary sidebar width between two preset sizes.\
+Use with commands or keyboard shortcuts.
 
-\!\[feature X\]\(images/feature-x.png\)
+Due to limitations in vscode, the width can currently only be set in predefined increments. The original intent was to toggle between the current width and a preset width defined in pixels, but this is unfortunately not possible at the moment.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Settings
+Width is set in steps, ranging between 0 and 16.
+- `toggleSidebarWidth.widthA`: Set the first width.\
+  Default: `1`
+- `toggleSidebarWidth.widthB`: Set the second width.\
+  Default: `6`
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## Keyboard shortcuts
+- `toggle-sidebar-width.toggleWidth`: Toggle the sidebar width between the preset values.\
+  Default: `Alt+B`
+- `toggle-sidebar-width.applyWidthA`: Set the sidebar width to the first value.\
+  Default: `(unset)`
+- `toggle-sidebar-width.applyWidthB`: Set the sidebar width to the second value.\
+  Default: `(unset)`

@@ -1,23 +1,76 @@
 {
-  "name": "toggle-sidebar-width",
+  "name": "toggle-sidebar-width-steps",
   "displayName": "Toggle Sidebar Width",
   "description": "",
-  "version": "0.0.1",
-  "engines": {
-    "vscode": "^1.96.0"
-  },
+  "version": "0.0.0",
   "categories": [
     "Other"
   ],
+  "keywords": [
+    "sidebar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "icon": "",
+  "galleryBanner": {
+    "color": "#009000",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "toggle-sidebar-width.helloWorld",
-        "title": "Hello World"
+        "command": "toggle-sidebar-width.toggleWidth",
+        "title": "Toggle sidebar width"
+      },
+      {
+        "command": "toggle-sidebar-width.applyWidthA",
+        "title": "Use sidebar width A"
+      },
+      {
+        "command": "toggle-sidebar-width.applyWidthB",
+        "title": "Use sidebar width B"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "toggle-sidebar-width.toggleWidth",
+        "key": "alt+b"
+      },
+      {
+        "command": "toggle-sidebar-width.applyWidthA",
+        "key": ""
+      },
+      {
+        "command": "toggle-sidebar-width.applyWidthB",
+        "key": ""
+      }
+    ],
+    "configuration": {
+      "title": "Toggle Sidebar Width",
+      "properties": {
+        "toggleSidebarWidth.widthA": {
+          "type": "number",
+          "default": 1,
+          "minimum": 0,
+          "maximum": 16,
+          "description": ""
+        },
+        "toggleSidebarWidth.widthB": {
+          "type": "number",
+          "default": 6,
+          "minimum": 0,
+          "maximum": 16,
+          "description": ""
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

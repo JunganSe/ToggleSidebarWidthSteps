@@ -1,17 +1,14 @@
-import * as vscode from 'vscode';
 import { KEY_WIDTH_A, KEY_WIDTH_B } from './constants';
 import { SidebarWidthWorker } from './worker';
 
 let self: SidebarWidthManager;
 
 export class SidebarWidthManager {
-    private readonly context: vscode.ExtensionContext;
     private readonly worker = new SidebarWidthWorker();
     private aWasLast: boolean = false;
 
-    constructor(context: vscode.ExtensionContext) {
+    constructor() {
         self = this;
-        this.context = context;
         this.worker = new SidebarWidthWorker();
     }
 

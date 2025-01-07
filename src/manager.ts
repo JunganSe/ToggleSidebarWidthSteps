@@ -1,9 +1,12 @@
 import * as vscode from 'vscode';
 
+let self: SidebarWidthManager;
+
 export class SidebarWidthManager {
     private readonly context: vscode.ExtensionContext;
 
     constructor(context: vscode.ExtensionContext) {
+        self = this;
         this.context = context;
     }
 

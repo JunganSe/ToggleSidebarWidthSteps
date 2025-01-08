@@ -5,11 +5,10 @@ This extension is in development, and is not yet released.\
 
 
 # Toggle sidebar width
-
 Toggle the primary sidebar width between two preset sizes.\
 Use with commands or keyboard shortcuts.
 
-Due to limitations in vscode, the width can currently only be set in predefined increments. The original intent was to toggle between the current width and a preset width defined in pixels, but this is unfortunately not possible at the moment.
+Due to limitations in the vscode api, the sidebar width can currently only be set in predefined increments/steps. It's a bit of a hack, and there may be some flickering. The step size appears to be 60 px, but may vary by monitor resolution.
 
 ## Settings
 Width is set in steps, ranging between 0 and 16.

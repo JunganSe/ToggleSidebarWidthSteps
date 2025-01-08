@@ -1,4 +1,4 @@
 # Change Log
 
-## 0.0.0
-- Unreleased development version
+## 0.1.0
+- Initial prerelease.

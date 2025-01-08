@@ -5,7 +5,7 @@ let self: SidebarWidthManager;
 
 export class SidebarWidthManager {
     private readonly worker = new SidebarWidthWorker();
-    private aWasLast: boolean = false;
+    private aIsNext: boolean = true;
 
     constructor() {
         self = this;
@@ -15,24 +15,24 @@ export class SidebarWidthManager {
     toggleWidth() {
         console.log('toggleWidth');
 
-        if (self.aWasLast)
-            self.applyWidthB();
-        else
+        if (self.aIsNext)
             self.applyWidthA();
+        else
+            self.applyWidthB();
     }
 
     applyWidthA() {
         console.log('applyWidthA');
         const widthA = self.worker.getConfigNumber(KEY_WIDTH_A);
         self.worker.setWidth(widthA);
-        self.aWasLast = true;
+        self.aIsNext = false;
     }
 
     applyWidthB() {
         console.log('applyWidthB');
         const widthB = self.worker.getConfigNumber(KEY_WIDTH_B);
         self.worker.setWidth(widthB);
-        self.aWasLast = false;
+        self.aIsNext = true;
     }
 
 

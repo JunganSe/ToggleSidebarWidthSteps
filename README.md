@@ -1,9 +1,3 @@
-### WIP
-This extension is in development, and is not yet released.\
--.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
-
-
-
 # Toggle sidebar width
 Toggle the primary sidebar width between two preset sizes.\
 Use with commands or keyboard shortcuts.

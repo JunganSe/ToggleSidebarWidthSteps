@@ -1,9 +1,9 @@
 import * as vscode from 'vscode';
 import { DECREASE_TO_MINIMUM_LOOPCOUNT } from "./constants";
 
-let self: SidebarWidthWorker;
+let self: Worker;
 
-export class SidebarWidthWorker {
+export class Worker {
     constructor() {
         self = this;
     }

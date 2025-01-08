@@ -1,15 +1,15 @@
 import { KEY_WIDTH_A, KEY_WIDTH_B } from './constants';
-import { SidebarWidthWorker } from './worker';
+import { Worker } from './worker';
 
-let self: SidebarWidthManager;
+let self: Manager;
 
-export class SidebarWidthManager {
-    private readonly worker = new SidebarWidthWorker();
+export class Manager {
+    private readonly worker = new Worker();
     private aIsNext: boolean = true;
 
     constructor() {
         self = this;
-        this.worker = new SidebarWidthWorker();
+        this.worker = new Worker();
     }
 
     toggleWidth() {
